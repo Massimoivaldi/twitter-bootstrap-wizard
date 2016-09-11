@@ -12,6 +12,7 @@
 			<section id="wizard">
 			  <div class="page-header">
 	            <h1>Wizard With Form Validation</h1>
+	            <p>http://stackoverflow.com/questions/3446069/populate-dropdown-select-with-array-using-jqueryS</p>
 	          </div>
 
 				<div id="rootwizard">
@@ -19,9 +20,9 @@
 					  <div class="navbar-inner">
 					    <div class="container">
 					<ul>
-					  	<li><a href="#tab1" data-toggle="tab">First</a></li>
-						<li><a href="#tab2" data-toggle="tab">Second</a></li>
-						<li><a href="#tab3" data-toggle="tab">Third</a></li>
+					  	<li><a href="#tab1" data-toggle="tab">Dove Pubblicare</a></li>
+						<li><a href="#tab2" data-toggle="tab">Dati del defunto</a></li>
+						<li><a href="#tab3" data-toggle="tab">Tipo di Annuncio</a></li>
 						<li><a href="#tab4" data-toggle="tab">Fourth</a></li>
 						<li><a href="#tab5" data-toggle="tab">Fifth</a></li>
 						<li><a href="#tab6" data-toggle="tab">Sixth</a></li>
@@ -35,12 +36,56 @@
                     </div>
 					<div class="tab-content">
 					    <div class="tab-pane" id="tab1">
-					      1
+					      <form>
+							  <div class="form-group">
+							    <label for="testata">Scegli Testata</label>
+							    <select id="testata" class="form-control">
+								  
+								</select>
+							  </div>
+							  <div class="form-group">
+							    <label for="edizione">Scegli Edizione</label>
+							    <select id="edizione" class="form-control">
+								  
+								</select>
+							  </div>
+							  <div class="form-group">
+							    <label for="rubrica">Scegli Rubrica</label>
+							    <select id="rubrica" class="form-control">
+								  
+								</select>
+							  </div>
+							  <div class="form-group">
+							    <label for="data">Scegli Data</label>
+							    <input type="text" class="form-control"  name="data" value="11-09-2001">
+							  </div>
+							  
 					    </div>
 					    <div class="tab-pane" id="tab2">
-					      	<p>
-						      	<input type='text' name='name' id='name' placeholder='Enter Your Name'>
-						      </p>
+					    	  <div class="form-group">
+							    <label for="gradopar">Grado di parentela</label>
+							    <select id="gradopar" class="form-control">
+								</select>
+							  </div>
+					    	  <div class="form-group">
+							    <label for="defunto">Ricerca Nome del Defunto</label>
+							    <select id="defunto" class="form-control">
+								</select>
+							  </div>
+							  <div class="row">
+									<div class="col-md-6">
+											<div class="form-group">
+										    <label for="nomedef">Nome del Defunto</label>
+										    <input type="text" class="form-control"  name="nomedef" >
+										    </div>
+									</div>
+									<div class="col-md-6">
+											  <div class="form-group">
+											    <label for="cognomedef">Cognome del Defunto</label>
+											    <input type="text" class="form-control"  name="cognomedef" >
+											  </div>
+									</div>
+								</div>
 					    </div>
 						<div class="tab-pane" id="tab3">
 							3
@@ -55,7 +100,8 @@
 							6
 					    </div>
 						<div class="tab-pane" id="tab7">
-							7
+							<button type="submit" class="btn btn-default">Submit</button>
+							</form>
 					    </div>
 						<ul class="pager wizard">
 							<li class="previous first" style="display:none;"><a href="#">First</a></li>
@@ -66,85 +112,7 @@
 					</div>
 				</div>
 
-<h3>HTML</h3>
-<pre class="prettyprint linenums">
-&lt;div id="rootwizard">
-	&lt;div class="navbar">
-	  &lt;div class="navbar-inner">
-	    &lt;div class="container">
-	&lt;ul>
-	  	&lt;li>&lt;a href="#tab1" data-toggle="tab">First&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab2" data-toggle="tab">Second&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab3" data-toggle="tab">Third&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab4" data-toggle="tab">Forth&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab5" data-toggle="tab">Fifth&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab6" data-toggle="tab">Sixth&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab7" data-toggle="tab">Seventh&lt;/a>&lt;/li>
-	&lt;/ul>
-	 &lt;/div>
-	  &lt;/div>
-	&lt;/div>
-	&lt;div id="bar" class="progress">
-      &lt;div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">&lt;/div>
-    &lt;/div>
-	&lt;div class="tab-content">
-	    &lt;div class="tab-pane" id="tab1">
-	      1
-	    &lt;/div>
-	    &lt;div class="tab-pane" id="tab2">
-	      	&lt;p>
-		      	&lt;input type='text' name='name' id='name' placeholder='Enter Your Name'>
-		      &lt;/p>
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab3">
-			3
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab4">
-			4
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab5">
-			5
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab6">
-			6
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab7">
-			7
-	    &lt;/div>
-		&lt;ul class="pager wizard">
-			&lt;li class="previous first" style="display:none;">&lt;a href="#">First&lt;/a>&lt;/li>
-			&lt;li class="previous">&lt;a href="#">Previous&lt;/a>&lt;/li>
-			&lt;li class="next last" style="display:none;">&lt;a href="#">Last&lt;/a>&lt;/li>
-		  	&lt;li class="next">&lt;a href="#">Next&lt;/a>&lt;/li>
-		&lt;/ul>
-	&lt;/div>
-&lt;/div>
-</pre>
 
-<h3>JS</h3>
-<pre class="prettyprint linenums">
-$(document).ready(function() {
-  	$('#rootwizard').bootstrapWizard({onNext: function(tab, navigation, index) {
-			if(index==2) {
-				// Make sure we entered the name
-				if(!$('#name').val()) {
-					alert('You must enter your name');
-					$('#name').focus();
-					return false;
-				}
-			}
-
-			// Set the name for the next tab
-			$('#tab3').html('Hello, ' + $('#name').val());
-
-		}, onTabShow: function(tab, navigation, index) {
-			var $total = navigation.find('li').length;
-			var $current = index+1;
-			var $percent = ($current/$total) * 100;
-			$('#rootwizard .progress-bar').css({width:$percent+'%'});
-		}});
-});
-</pre>
 
 			</section>
 	</div>
@@ -152,29 +120,9 @@ $(document).ready(function() {
     <script src="../bootstrap/js/bootstrap.min.js"></script>
 	<script src="../jquery.bootstrap.wizard.js"></script>
 	<script src="../prettify.js"></script>
+	<script src="../custom.js"></script>
 	<script>
-	$(document).ready(function() {
-	  	$('#rootwizard').bootstrapWizard({onNext: function(tab, navigation, index) {
-				if(index==2) {
-					// Make sure we entered the name
-					if(!$('#name').val()) {
-						alert('You must enter your name');
-						$('#name').focus();
-						return false;
-					}
-				}
-
-				// Set the name for the next tab
-				$('#tab3').html('Hello, ' + $('#name').val());
-
-			}, onTabShow: function(tab, navigation, index) {
-				var $total = navigation.find('li').length;
-				var $current = index+1;
-				var $percent = ($current/$total) * 100;
-				$('#rootwizard .progress-bar').css({width:$percent+'%'});
-			}});
-		window.prettyPrint && prettyPrint()
-	});
+	
 	</script>
   </body>
 </html>
