@@ -11,8 +11,8 @@
 
 			<section id="wizard">
 			  <div class="page-header">
-	            <h1>Wizard With Form Validation</h1>
-	            <p>http://stackoverflow.com/questions/3446069/populate-dropdown-select-with-array-using-jqueryS</p>
+	            <h1>Form necrologie</h1>
+	            <!--<p>http://stackoverflow.com/questions/3446069/populate-dropdown-select-with-array-using-jqueryS</p>-->
 	          </div>
 
 				<div id="rootwizard">
@@ -23,10 +23,12 @@
 					  	<li><a href="#tab1" data-toggle="tab">Dove Pubblicare</a></li>
 						<li><a href="#tab2" data-toggle="tab">Dati del defunto</a></li>
 						<li><a href="#tab3" data-toggle="tab">Tipo di Annuncio</a></li>
-						<li><a href="#tab4" data-toggle="tab">Fourth</a></li>
-						<li><a href="#tab5" data-toggle="tab">Fifth</a></li>
+						<li><a href="#tab4" data-toggle="tab">Compilazione Annuncio</a></li>
+						<li><a href="#tab5" data-toggle="tab">Riepilogo</a></li>
+						<!---
 						<li><a href="#tab6" data-toggle="tab">Sixth</a></li>
 						<li><a href="#tab7" data-toggle="tab">Seventh</a></li>
+						--->
 					</ul>
 					 </div>
 					  </div>
@@ -88,21 +90,122 @@
 								</div>
 					    </div>
 						<div class="tab-pane" id="tab3">
-							3
+							<div class="form-group">
+							    <label for="tipoannuncio">Tipo di Annuncio</label>
+							    <select id="tipoannuncio" class="form-control">
+								</select>
+							</div>
+							<div id="fotoadesione" class="row" style="display:none">
+								<div class="col-md-6">
+									<div class="radio">
+									  <label>
+									    <input type="radio" name="tipoannuncio" id="tipoannuncio1" value="tipoannuncio1">
+									    Scegli questo tipo di annuncio
+									  </label>
+									</div>
+									<p>foto annuncio adesione 1</p>
+								</div>
+								<div class="col-md-6">
+									<div class="radio">
+									  <label>
+									    <input type="radio" name="tipoannuncio" id="tipoannuncio2" value="tipoannuncio2">
+									    Scegli questo tipo di annuncio
+									  </label>
+									</div>
+									<p>foto annuncio adesione 1</p>
+								</div>
+							</div>
 					    </div>
 						<div class="tab-pane" id="tab4">
-							4
+							<div class="row">
+								<div class="col-md-8">
+									<div class="form-group">
+									    <label for="citazione">Citazione, poesia, versetto</label>
+									    <textarea id="citazione" class="form-control" rows="3" name="citazione"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="firmacitazione">Firma citazione</label>
+									    <textarea id="firmacitazione" class="form-control" rows="1" name="firmacitazione"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="testoiniziale">Testo Iniziale</label>
+									    <textarea id="testoiniziale" class="form-control" rows="3" name="testoiniziale"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="onorificienza">Titolo sociale / Onorificienza</label>
+									    <textarea id="onorificienza" class="form-control" rows="1" name="onorificienza"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="nomecomdefunto">Nome e Cognome del Defunto</label>
+									    <textarea id="nomecomdefunto" class="form-control" rows="2" name="nomecomdefunto"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="vedovanza">Vedovanza / Cognome da sposati</label>
+									    <textarea id="vedovanza" class="form-control" rows="2" name="vedovanza"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="dianni">Di anni... / Qualifica aziendale</label>
+									    <textarea id="dianni" class="form-control" rows="2" name="dianni"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="testoinserzione">Testo Inserzione</label>
+									    <textarea id="testoinserzione" class="form-control" rows="4" name="testoinserzione"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="listanomi">Lista nomi rientrata</label>
+									    <textarea id="listanomi" class="form-control" rows="4" name="listanomi"></textarea>
+									</div>
+									<div class="form-group">
+									    <label for="luogodata">Luogo e data</label>
+									    <textarea id="luogodata" class="form-control" rows="4" name="luogodata"></textarea>
+									</div>
+								</div>	
+								<div class="col-md-4">
+									<div class="form-group">
+									    <label for="niente">Anteprima annuncio</label>
+									    <p id="ante-citazione"></p>
+									    <p id="ante-firmacitazione"></p>
+									    <p id="ante-testoiniziale"></p>
+									    <p id="ante-onorificienza"></p>
+									    <p id="ante-nomecomdefunto"></p>
+									    <p id="ante-vedovanza"></p>
+									    <p id="ante-dianni"></p>
+									    <p id="ante-testoinserzione"></p>
+									    <p id="ante-listanomi"></p>
+									    <p id="ante-luogodata"></p>
+									</div>
+								</div>
+							</div>
 					    </div>
 						<div class="tab-pane" id="tab5">
-							5
+							<div class="row">
+								<div class="col-md-4">
+									<p id="riep-citazione"></p>
+								    <p id="riep-firmacitazione"></p>
+								    <p id="riep-testoiniziale"></p>
+								    <p id="riep-onorificienza"></p>
+								    <p id="riep-nomecomdefunto"></p>
+								    <p id="riep-vedovanza"></p>
+								    <p id="riep-dianni"></p>
+								    <p id="riep-testoinserzione"></p>
+								    <p id="riep-listanomi"></p>
+								    <p id="riep-luogodata"></p>
+								</div>
+								<div class="col-md-8">
+									<h3>Riepilogo:</h3>
+									<button type="submit" class="btn btn-default">Submit</button>
+									</form>
+								</div>
+							</div>
 					    </div>
+					    <!--- 
 						<div class="tab-pane" id="tab6">
 							6
 					    </div>
 						<div class="tab-pane" id="tab7">
-							<button type="submit" class="btn btn-default">Submit</button>
-							</form>
+							
 					    </div>
+					    --->
 						<ul class="pager wizard">
 							<li class="previous first" style="display:none;"><a href="#">First</a></li>
 							<li class="previous"><a href="#">Previous</a></li>
